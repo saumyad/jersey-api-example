@@ -1,6 +1,9 @@
 package com.jking31cs.jerseyexample.objects;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.base.Objects;
+import com.google.common.base.Optional;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 
@@ -16,10 +19,11 @@ public class User {
     private String name;
     private String email;
 
+    @JsonCreator
     public User(
-        Long id,
-        String name,
-        String email
+        @JsonProperty("id") Long id,
+        @JsonProperty("name") String name,
+        @JsonProperty("email") String email
     ) {
         this.id = id;
         this.name = name;

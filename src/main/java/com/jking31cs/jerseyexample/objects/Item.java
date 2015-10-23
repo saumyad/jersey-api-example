@@ -12,6 +12,8 @@ public class Item {
     private boolean done;
     private String message;
 
+    private Item() {}
+    
     @JsonCreator
     public Item(
             @JsonProperty("done") boolean done,

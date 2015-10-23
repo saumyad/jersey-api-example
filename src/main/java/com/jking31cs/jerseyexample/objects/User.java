@@ -15,10 +15,11 @@ public class User {
 
     @Id
     private Long id;
-
     private String name;
     private String email;
 
+    private User() {}
+    
     @JsonCreator
     public User(
         @JsonProperty("id") Long id,

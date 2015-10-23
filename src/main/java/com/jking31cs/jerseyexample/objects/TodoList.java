@@ -21,6 +21,8 @@ public class TodoList {
 
     private List<Item> items;
 
+    private TodoList() {}
+
     @JsonCreator
     public TodoList(
         @JsonProperty("id") Long id,

@@ -12,8 +12,11 @@ public class Item {
     private boolean done;
     private String message;
 
-    private Item() {}
-    
+    private Item() {
+        this.done = false;
+        this.message = null;
+    }
+
     @JsonCreator
     public Item(
             @JsonProperty("done") boolean done,

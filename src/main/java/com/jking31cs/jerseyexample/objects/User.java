@@ -18,7 +18,11 @@ public class User {
     private String name;
     private String email;
 
-    private User() {}
+    private User() {
+        this.id = null;
+        this.name = null;
+        this.email = null;
+    }
     
     @JsonCreator
     public User(
